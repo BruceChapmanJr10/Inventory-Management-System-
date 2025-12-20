@@ -25,8 +25,28 @@ C.  Customize the HTML user interface for your customer’s application. The use
 
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+            
+            Create: about.html
+            file: templates
+            
+            Change: Added information about the company
+            File: about.html
+            Lines: 14-29
+            
+            Change: Created button back to mainscreen
+            File: about.html
+            Lines: 17-19
 
+            Create: AboutController
+            File: controllers
 
+            Change: Created controller for about
+            File: AboutController
+            Lines: 6-12
+
+            Change: Created button to about page 
+            File: mainscreen.html
+            Lines:17-19
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
 
