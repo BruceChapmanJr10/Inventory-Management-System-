@@ -39,33 +39,75 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+        if(outsourcedPartRepository.count() == 0) {
+            OutsourcedPart battery = new OutsourcedPart();
+            battery.setName("battery");
+            battery.setInv(20);
+            battery.setPrice(95.00);
+            battery.setId(1);
+            outsourcedPartRepository.save(battery);
+
+            OutsourcedPart tires = new OutsourcedPart();
+            tires.setName("tires");
+            tires.setInv(40);
+            tires.setPrice(105.00);
+            tires.setId(2);
+            outsourcedPartRepository.save(tires);
+
+            OutsourcedPart sparkPlugs = new OutsourcedPart();
+            sparkPlugs.setName("spark plugs");
+            sparkPlugs.setInv(80);
+            sparkPlugs.setPrice(20.00);
+            sparkPlugs.setId(3);
+            outsourcedPartRepository.save(sparkPlugs);
+
+            OutsourcedPart oilFilters = new OutsourcedPart();
+            oilFilters.setName("oil filters");
+            oilFilters.setInv(60);
+            oilFilters.setPrice(30.00);
+            oilFilters.setId(4);
+            outsourcedPartRepository.save(oilFilters);
+
+            OutsourcedPart lights = new OutsourcedPart();
+            lights.setName("lights");
+            lights.setInv(90);
+            lights.setPrice(80.00);
+            lights.setId(5);
+            outsourcedPartRepository.save(lights);
+
+            OutsourcedPart thePart = null;
+            List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+            for (OutsourcedPart part : outsourcedParts) {
+                if (part.getName().equals("Battery")) thePart = part;
+                if (part.getName().equals("tires")) thePart = part;
+                if (part.getName().equals("spark plugs")) thePart = part;
+                if (part.getName().equals("oil filters")) thePart = part;
+                if (part.getName().equals("lights")) thePart = part;
+            }
+
+
+            System.out.println(thePart.getCompanyName());
+
+            outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+            for (OutsourcedPart part : outsourcedParts) {
+                System.out.println(part.getName() + " " + part.getCompanyName());
+            }
+
         }
 
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
+        if(productRepository.count() == 0) {
+            Product bmw = new Product("BMW", 91000.0, 15);
+            Product honda = new Product("Honda", 65000.0, 25);
+            Product kia = new Product("Kia", 45000.0, 22);
+            Product chevrolet = new Product("Chevrolet", 52000.0, 30);
+            Product ford = new Product("Ford", 48000.0, 27);
+            productRepository.save(bmw);
+            productRepository.save(honda);
+            productRepository.save(kia);
+            productRepository.save(chevrolet);
+            productRepository.save(ford);
         }
 
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
