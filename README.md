@@ -27,7 +27,7 @@ C.  Customize the HTML user interface for your customer’s application. The use
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
             
             Create: about.html
-            file: templates
+            Folder: templates
             
             Change: Added information about the company
             File: about.html
@@ -38,7 +38,7 @@ D.  Add an “About” page to the application to describe your chosen customer�
             Lines: 17-19
 
             Create: AboutController
-            File: controllers
+            Folder: controllers
 
             Change: Created controller for about
             File: AboutController
@@ -63,7 +63,27 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 •  The “Buy Now” button must be next to the buttons that update and delete products.
 • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
+        
+            Change: Added Buy Now button
+            File: mainscreen.html
+            Line: 87
 
+            Change: Added buy product controller
+            File:AddProductController
+            Lines: 177-189
+    
+            Create: Create failed.html
+            Folder: templates
+
+            Create: Create success.html
+            Folder: templates
+
+            Change: Added Logic to decrement product inventory by 1
+            File: Product.java
+            Lines: 103-108
+
+            
+            
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.

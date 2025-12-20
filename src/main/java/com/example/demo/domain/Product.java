@@ -100,6 +100,16 @@ public class Product implements Serializable {
         return id == product.id;
     }
 
+    public boolean buyProduct() {
+        if (this.inv >= 1 ) {
+            this.inv--;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
