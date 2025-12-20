@@ -45,6 +45,8 @@ public class BootStrapData implements CommandLineRunner {
             battery.setInv(20);
             battery.setPrice(95.00);
             battery.setId(1);
+            battery.setMinInv(2);
+            battery.setMaxInv(30);
             outsourcedPartRepository.save(battery);
 
             OutsourcedPart tires = new OutsourcedPart();
@@ -52,6 +54,8 @@ public class BootStrapData implements CommandLineRunner {
             tires.setInv(40);
             tires.setPrice(105.00);
             tires.setId(2);
+            tires.setMinInv(2);
+            tires.setMaxInv(50);
             outsourcedPartRepository.save(tires);
 
             OutsourcedPart sparkPlugs = new OutsourcedPart();
@@ -59,6 +63,8 @@ public class BootStrapData implements CommandLineRunner {
             sparkPlugs.setInv(80);
             sparkPlugs.setPrice(20.00);
             sparkPlugs.setId(3);
+            sparkPlugs.setMinInv(3);
+            sparkPlugs.setMaxInv(100);
             outsourcedPartRepository.save(sparkPlugs);
 
             OutsourcedPart oilFilters = new OutsourcedPart();
@@ -66,6 +72,8 @@ public class BootStrapData implements CommandLineRunner {
             oilFilters.setInv(60);
             oilFilters.setPrice(30.00);
             oilFilters.setId(4);
+            oilFilters.setMinInv(2);
+            oilFilters.setMaxInv(70);
             outsourcedPartRepository.save(oilFilters);
 
             OutsourcedPart lights = new OutsourcedPart();
@@ -73,6 +81,8 @@ public class BootStrapData implements CommandLineRunner {
             lights.setInv(90);
             lights.setPrice(80.00);
             lights.setId(5);
+            lights.setMinInv(2);
+            lights.setMaxInv(100);
             outsourcedPartRepository.save(lights);
 
             OutsourcedPart thePart = null;

@@ -92,6 +92,68 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+            Change: Added min and max inventory
+            File: Part.java
+            Lines: 31-34
+
+            Change: Added getter and setters for min and max inventory
+            File: Part.java
+            Lines: 89-102
+
+            Change: Added min and max values to parts table
+            File: BootStrapData.java
+            Lines: 48-49, 57-58, 66-67, 75-76, 84-85
+
+            Change: Renamed the file presistent storage is saved to
+            File: application.properties
+            Line: 6
+
+            Change:Added min and max values to InhousePartForm
+            File: InhousePartForm.html
+            Lines: 26-28
+            
+            Change: Added labels to form InhousePartForm fields
+            File: InhousePartForm
+            Lines: 18, 21, 24, 26, 29
+
+            Change: Added min and max values to OutsourcedPartForm
+            File:OutsourcedPartForm.html
+            Lines: 27-31
+
+            Change Added labels to form OutsourcedPartForm
+            File: OutsourcedPartForm.html
+            Lines: 17, 19, 22, 25
+
+            Create: Created file InventoryValidator
+            Folder: validators
+
+            Change: Wrote if statement to validate inventory min and max
+            File: InventoryValiator
+            Lines: 31-37
+            
+            Create: Created file ValidInventory
+            Folder: validators
+
+            Change: Created an interface
+            File: ValidInventory
+            Lines: 16-22
+
+            Change: added error message to InhousePartForm
+            File: InhousePartFrom.html
+            Lines: 32 - 39
+
+            Change: added error message to OutsourcePartForm
+            File: OutsourcePartFrom.html
+            Lines: 33 - 35
+
+            
+
+            
+
+            
+            
+
+            
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
