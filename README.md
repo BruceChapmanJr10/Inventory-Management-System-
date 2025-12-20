@@ -138,28 +138,29 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
             File: ValidInventory
             Lines: 16-22
 
-            Change: added error message to InhousePartForm
-            File: InhousePartFrom.html
-            Lines: 32 - 39
-
-            Change: added error message to OutsourcePartForm
-            File: OutsourcePartFrom.html
-            Lines: 33 - 35
-
             
 
-            
-
-            
-            
-
-            
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
+            Change: added error message display to InhousePartForm
+            File: InhousePartFrom.html
+            Lines: 32 - 39
+
+            Change: added error message display to OutsourcePartForm
+            File: OutsourcePartFrom.html
+            Lines: 33 - 35
+
+            Change: added validation message for max part inventory 
+            File: InventoryValidator
+            Line: 32
+
+            Change: added validation message for min part inventory
+            File: InventoryValidator
+            Line: 35
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
