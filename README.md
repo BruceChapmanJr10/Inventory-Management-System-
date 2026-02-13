@@ -9,21 +9,21 @@ This project demonstrates backend architecture, object-oriented design, validati
 
 ## 🛠 Tech Stack
 
-- **Backend:** Spring Boot 2.6.6
-- **Language:** Java 17
-- **Database:** H2 In-Memory Database
-- **Persistence:** Spring Data JPA (Hibernate)
-- **Frontend:** Thymeleaf
-- **Validation:** Custom Validators + JSR-380
-- **Build Tool:** Maven
-- **Architecture:** MVC (Controller → Service → Repository)
+- Backend: Spring Boot 2.6.6  
+- Language: Java 17  
+- Database: H2 In-Memory Database  
+- Persistence: Spring Data JPA (Hibernate)  
+- Frontend: Thymeleaf  
+- Validation: Custom Validators + JSR-380  
+- Build Tool: Maven  
+- Architecture: MVC (Controller → Service → Repository)
 
 ---
 
 ## 📋 Core Features
 
 ### 🔧 Part Management
-- Add, update, delete parts
+- Add, update, and delete parts
 - Separate part types:
   - In-House Parts
   - Outsourced Parts
@@ -31,20 +31,20 @@ This project demonstrates backend architecture, object-oriented design, validati
 - Business rule validation before deletion
 
 ### 📦 Product Management
-- Add, update, delete products
+- Add, update, and delete products
 - Associate multiple parts with a product
 - Inventory validation to prevent invalid product configurations
 - Custom product price validation logic
 
 ### 🛡 Business Rule Validation
-Custom validation logic including:
+Includes custom validation logic for:
 - Inventory constraints
-- Minimum/maximum inventory enforcement
+- Minimum and maximum inventory enforcement
 - Product price validation
 - Delete protection rules
 
 ### 🌱 Bootstrap Data
-- Preloaded sample inventory data for testing
+- Preloaded sample inventory data for testing and demonstration
 
 ---
 
@@ -53,13 +53,13 @@ Custom validation logic including:
 This application follows a clean layered architecture:
 
 Controller Layer  
-Handles HTTP requests and UI interactions.
+Handles HTTP requests and user interaction.
 
 Service Layer  
 Contains business logic and validation coordination.
 
 Repository Layer  
-Spring Data JPA repositories for persistence.
+Uses Spring Data JPA for database operations.
 
 Domain Layer  
 Entity classes:
@@ -77,6 +77,54 @@ Custom business rule validation classes.
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/yourusername/d287-project.git
-cd d287-project
+git clone https://github.com/yourusername/d287-project.git  
+cd d287-project  
+
+### 2. Build the project
+
+mvn clean install  
+
+### 3. Run the application
+
+mvn spring-boot:run  
+
+### 4. Open in browser
+
+http://localhost:8080  
+
+### H2 Console (Optional)
+
+http://localhost:8080/h2-console  
+
+---
+
+## 📂 Project Structure
+
+com.example.demo  
+├── bootstrap  
+├── controllers  
+├── domain  
+├── repositories  
+├── service  
+├── validators  
+└── DemoApplication  
+
+---
+
+## 🎯 What This Project Demonstrates
+
+- Spring Boot MVC architecture  
+- Object-oriented design with inheritance (Part → InhousePart / OutsourcedPart)  
+- Custom validation logic and business rule enforcement  
+- Service layer abstraction  
+- JPA entity relationships  
+- Database integration using Hibernate  
+- Clean separation of concerns  
+
+---
+
+## 👨‍💻 Author
+
+Bruce Chapman  
+B.S. Software Engineering  
+Java • Spring Boot • Backend Development
