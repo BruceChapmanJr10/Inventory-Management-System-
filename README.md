@@ -77,8 +77,7 @@ Custom business rule validation classes.
 
 ### 1. Clone the repository
 
-git clone https://github.com/yourusername/d287-project.git  
-cd d287-project  
+git clone https://github.com/BruceChapmanJr10/Inventory-Management-System-.git    
 
 ### 2. Build the project
 
@@ -90,24 +89,7 @@ mvn spring-boot:run
 
 ### 4. Open in browser
 
-http://localhost:8080  
-
-### H2 Console (Optional)
-
-http://localhost:8080/h2-console  
-
----
-
-## 📂 Project Structure
-
-com.example.demo  
-├── bootstrap  
-├── controllers  
-├── domain  
-├── repositories  
-├── service  
-├── validators  
-└── DemoApplication  
+http://localhost:8080 
 
 ---
 
