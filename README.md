@@ -1,6 +1,9 @@
-# Inventory Management Web Application
+# Inventory Management System (Spring Boot)
 
-A full-stack Spring Boot web application built with Java 17 that manages inventory data using a layered MVC architecture. The application demonstrates backend development, database integration, server-side rendering, and form validation using modern Spring technologies.
+A full-stack Inventory Management web application built with Spring Boot and Java 17.  
+The system allows users to manage products and associated parts, including both in-house and outsourced components, while enforcing business validation rules.
+
+This project demonstrates backend architecture, object-oriented design, validation logic, and database integration using modern Spring technologies.
 
 ---
 
@@ -10,44 +13,67 @@ A full-stack Spring Boot web application built with Java 17 that manages invento
 - **Language:** Java 17
 - **Database:** H2 In-Memory Database
 - **Persistence:** Spring Data JPA (Hibernate)
-- **Frontend:** Thymeleaf (Server-Side Rendering)
-- **Validation:** Spring Boot Validation (JSR-380)
+- **Frontend:** Thymeleaf
+- **Validation:** Custom Validators + JSR-380
 - **Build Tool:** Maven
-- **Testing:** JUnit
+- **Architecture:** MVC (Controller → Service → Repository)
 
 ---
 
-## 📋 Features
+## 📋 Core Features
 
-- CRUD operations for inventory entities
-- Server-side rendered dynamic web pages using Thymeleaf
-- Form validation with error handling
-- JPA entity relationships
-- In-memory H2 database for rapid development
-- Layered architecture (Controller → Service → Repository)
-- Clean separation of concerns following MVC principles
+### 🔧 Part Management
+- Add, update, delete parts
+- Separate part types:
+  - In-House Parts
+  - Outsourced Parts
+- Inventory tracking per part
+- Business rule validation before deletion
+
+### 📦 Product Management
+- Add, update, delete products
+- Associate multiple parts with a product
+- Inventory validation to prevent invalid product configurations
+- Custom product price validation logic
+
+### 🛡 Business Rule Validation
+Custom validation logic including:
+- Inventory constraints
+- Minimum/maximum inventory enforcement
+- Product price validation
+- Delete protection rules
+
+### 🌱 Bootstrap Data
+- Preloaded sample inventory data for testing
 
 ---
 
 ## 🏗 Architecture Overview
 
-This project follows standard Spring Boot MVC architecture:
+This application follows a clean layered architecture:
 
-Controller  
-→ Handles HTTP requests and user interaction  
+Controller Layer  
+Handles HTTP requests and UI interactions.
 
-Service  
-→ Contains business logic  
+Service Layer  
+Contains business logic and validation coordination.
 
-Repository  
-→ Interfaces with the database using Spring Data JPA  
+Repository Layer  
+Spring Data JPA repositories for persistence.
 
-Entity  
-→ Represents persistent domain models  
+Domain Layer  
+Entity classes:
+- Part (base class)
+- InhousePart
+- OutsourcedPart
+- Product
+
+Validator Layer  
+Custom business rule validation classes.
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ Running the Application
 
 ### 1. Clone the repository
 
